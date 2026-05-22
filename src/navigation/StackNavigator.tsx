@@ -21,7 +21,7 @@ export const StackNavigator = () => {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: "Guía de campo de especies" }}
+          options={{ title: "Guía de especies de campo" }}
         />
         <Stack.Screen
           name="Detail"

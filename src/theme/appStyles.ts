@@ -22,9 +22,7 @@ const SIZES = {
   radius: 12,
 };
 
-// ────────────────────────────────────────────────────────────
-// ESTILOS PARA HOME SCREEN
-// ────────────────────────────────────────────────────────────
+
 export const homeStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -145,9 +143,7 @@ export const homeStyles = StyleSheet.create({
   },
 });
 
-// ────────────────────────────────────────────────────────────
-// ESTILOS PARA FORM SCREEN
-// ────────────────────────────────────────────────────────────
+
 export const formStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -243,9 +239,7 @@ export const formStyles = StyleSheet.create({
   },
 });
 
-// ────────────────────────────────────────────────────────────
-// ESTILOS PARA DETALLE SCREEN (por si lo usas)
-// ────────────────────────────────────────────────────────────
+
 export const detailStyles = StyleSheet.create({
   container: {
     flex: 1,

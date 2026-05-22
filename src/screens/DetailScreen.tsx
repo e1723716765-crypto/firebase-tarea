@@ -25,25 +25,24 @@ export const DetailScreen = ({ route, navigation }: Props) => {
       style={detailStyles.container}
       contentContainerStyle={detailStyles.content}
     >
-      {species!.imageUrl ? (
-        <Image source={{ uri: species!.imageUrl }} style={detailStyles.image} />
-      ) : (
-        <View style={[detailStyles.image, detailStyles.imagePlaceholder]}>
-          <Text style={{ fontSize: 64 }}>🌿</Text>
-        </View>
-      )}
+      {species && species.imageUrl ? (
+  <Image source={{ uri: species.imageUrl }} style={detailStyles.image} />
+) : (
+  <View style={[detailStyles.image, detailStyles.imagePlaceholder]}>
+    <Text style={{ fontSize: 64 }}>🌿</Text>
+  </View>
+)}
+
 
       <View style={detailStyles.dataCard}>
-        <Text style={detailStyles.commonName}>{species!.commonName}</Text>
-        <Text style={detailStyles.scientificName}>
-          {species!.scientificName}
-        </Text>
+        <Text style={detailStyles.commonName}>{species?.commonName ?? ""}</Text>
+    <Text style={detailStyles.scientificName}>{species?.scientificName ?? ""}</Text>
 
         <View style={detailStyles.divider} />
 
         <View style={detailStyles.field}>
           <Text style={detailStyles.fieldLabel}>Hábitat</Text>
-          <Text style={detailStyles.fieldValue}>{species!.habitat}</Text>
+          <Text style={detailStyles.fieldValue}>{species?.habitat ?? ""}</Text>
         </View>
       </View>
 
@@ -55,9 +54,7 @@ export const DetailScreen = ({ route, navigation }: Props) => {
           <Text style={detailStyles.editBtnText}>✏️ Editar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={detailStyles.deleteBtn} onPress={() => {}}>
-          <Text style={detailStyles.deleteBtnText}>🗑️ Eliminar</Text>
-        </TouchableOpacity>
+      
       </View>
     </ScrollView>
   );

@@ -24,7 +24,7 @@ export const useSpecies = (): UseSpeciesReturn => {
         setLoading(false);
       },
     );
-    //Cancelar subcripción al desmontar el componente
+    
     return () => unsubscribe();
   }, []);
   return { species, loading, error };
